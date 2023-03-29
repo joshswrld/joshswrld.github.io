@@ -13,34 +13,40 @@
             font-size:small
 
         }
+        form {
+            text-align: center;
+            background-color: #edf0f5;
+        }
     </style>
 </head>
 <body>
+    <div id="form">
+        <form>
     <h1>Sign Up</h1>
     <h3>It's free and always will be.</h3>
     <input type="text" name="first_name" size="15" maxlength="100" placeholder="First Name">
     <input type="text" name="last_name" size="15" maxlength="100" placeholder="Last Name"><br/>
     <input type="text" name="your_email" size="36" maxlength="200" placeholder="Your Email"><br/>
-    <input type="text" name="first_name" size="36" maxlength="200" placeholder="First Name"><br/>
-    <input type="text" name="first_name" size="36" maxlength="200" placeholder="First Name">
+    <input type="text" name="re-enter-email" size="36" maxlength="200" placeholder="Re-enter Email"><br/>
+    <input type="text" name="new-password" size="36" maxlength="200" placeholder="New Password">
     <br/>
     <h4>Birthday</h4>
-    <select name="months" id="months">
+    <select class="form-select" name="months" id="months">
         <option value="">Month</option>
-        <option value="September">January</option>
-        <option value="September">Febuary</option>
-        <option value="September">March</option>
-        <option value="September">April</option>
-        <option value="September">May</option>
-        <option value="September">June</option>
-        <option value="September">July</option>
-        <option value="September">August</option>
+        <option value="January">January</option>
+        <option value="February">Febuary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
         <option value="September">September</option>
-        <option value="September">October</option>
-        <option value="September">November</option>
-        <option value="September">December</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
     </select>
-    <select name="months" id="months">
+    <select class="form-select" name="day" id="day">
         <option value="">Day</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -166,5 +172,7 @@
 <input type="radio" name="gender" value="female"> Female
 <p>by clicking Sign Up, you agree to our Terms and that you<br/>
 have read our Data Use Policy, including our Cookie Use.</p>
+</form>
+</div>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <meta viewport="width=device-width, initial-scale=1">
+    <title>LP41</title>
+</head>
+<body>
+    <label for="kg">Enter weight in kilograms: </label>
+    <input type="number" od="kg" name="kg" min="0">
+<br/>
+    <label for="length">Enter Length in centimeters: </label>
+    <input type="number" od="length" name="length" min="0">
+    <br/>
+    <label for="width">Enter Width in centimeters: </label>
+    <input type="number" od="width" name="width" min="0">
+    <br/>
+    <label for="height">Enter Height in centimeters: </label>
+    <input type="number" od="height" name="height" min="0">
+    <br/>
+    <button onclick="req()">Calculate</button>
+    <p id="opt"></p>
+    <br/>
+
+    <script>
+        function req() {
+            var copies = Number(document.getElementById("copies").value);
+        var p = document.getElementById("out");
+        if (length + width + height > 100,000) {
+            p.innerText
+        }
+        if (weight > 27 && ) {
+            p.innerText = "Too heavy and too large"
+        } 
+
+        if (price > 0) {
+            total = price * copies;
+            p.innerText = "Price per copy is $" + price + "\n";
+            p.innerText += "Total cost is $" + total.toFixed(2);
+        }
+        }
+    </script>
+</body>
+</html>

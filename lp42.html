@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta lang="en">
     <meta viewport="width=device-width, initial-scale=1">
-    <title>LP41</title>
+    <title>LP42</title>
 </head>
 <body>
     <label for="kg">Enter weight in kilograms: </label>
@@ -25,19 +25,18 @@
 
     <script>
         function req() {
-            var copies = Number(document.getElementById("copies").value);
-        var p = document.getElementById("out");
-        if (length + width + height > 100,000) {
-            p.innerText
-        }
-        if (weight > 27 && ) {
-            p.innerText = "Too heavy and too large"
-        } 
+            var p=document.getElementById("opt");
+            var weight = Number(document.getElementById("kg").value);
+            var length = Number(document.getElementById("length").value);
+            var width = Number(document.getElementById("width").value);
+            var height = Number(document.getElementById("height").value);
 
-        if (price > 0) {
-            total = price * copies;
-            p.innerText = "Price per copy is $" + price + "\n";
-            p.innerText += "Total cost is $" + total.toFixed(2);
+        if (weight > 27 && length * width * height > 100,000) {
+            p.innerText = "Too heavy and too large"
+        } else if (weight > 27) {
+            p.innerText = "Too Heavy"
+        } else if (length * width * height > 100,000) {
+            p.innerText = "Too Large"
         }
         }
     </script>

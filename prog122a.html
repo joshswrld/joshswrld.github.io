@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <meta viewport="width=device-width, initial-scale=1">
+    <title>Prog122a</title>
+</head>
+<body>
+    <p id ="out"></p>
+    <script>
+        var msg = "Number\tSquare\tSquare Root\n";
+        // "\t" means tab space, "\n" means new line (line-break) //*
+        var lcv = 1;
+        while (lcv <= 50) {
+            msg += lcv + "\t" + (lcv**2) + "\t" + Math.sqrt(lcv) + "\n";
+            lcv++;
+        }
+        document.getElementById("out").innerText + msg;
+    </script>
+</body>
+</html>

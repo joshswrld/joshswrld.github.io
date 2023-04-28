@@ -5,29 +5,53 @@
     <meta lang="en">
     <meta viewport="width=device-width, initial-scale=1">
     <title>MortgageCalc</title>
-
+<style>
+    body {
+        background-color: lightgrey;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+        color: darkslateblue;
+    }
+    button {
+        color: white;
+        background-color: darkslateblue;
+    }
+    input {
+        background-color: aqua;
+        color: darkslateblue
+    }
+</style>
 </head>
 <body>
     <p id="out"></p>
     <label for="P">Principal: </label>
-    <input type="number" od="P" name="P" min="0">
-
+    <input type="number" id="P" name="P" min="0">
+<br/>
     <label for="r">Interest Rate as % (e.g. 7.9): </label>
-    <input type="number" od="r" name="r" min="0">
-
+    <input type="number" id="r" name="r" min="0">
+    <br/>
     <label for="t">Number of Years: </label>
-    <input type="number" od="t" name="t" min="0">
-
+    <input type="number" id="t" name="t" min="0">
+    <br/>
     <label for="m">Monthly Payment: </label>
-    <input type="number" od="m" name="m" min="0">
+    <input type="number" id="m" name="m" min="0"><br/>
     <button onclick="price()">Calculate</button>
-    <button onclick="reset();">Reset</button>
+    <button onclick="reset()">Reset</button>
+
     <script>
         function reset() {
             var p = document.getElementById("out");
             p.innerText = "";
         }
-        
+        function price() {
+            var n = 12
+            var p = document.getElementById("P").value;
+            var r = document.getElementById("r").value;
+            var t = document.getElementById("t").value;
+            var m = document.getElementById("m").value;
+            var B = p * (1 + r / n)**(n * t) - (m * ((1+ r/n)** (n * t) - 1)/(r / n));
+            document.getElementById("out").innerHTML="$" + B.toFixed(2);
+        }
     </script>
 </body>
 </html>

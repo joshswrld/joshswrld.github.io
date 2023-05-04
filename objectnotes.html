@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <meta viewport="width=device-width, initial-scale=1">
+    <title>Notes on Objects in JS</title>
+</head>
+<body>
+    <script>
+        var hotel = {
+            name: "Holiday Inn",
+            rooms: 50,
+            booked: 30;
+            checkAvailable: function() {
+                return this.rooms - this.booked;
+            }
+        };
+
+        document.write(hotel["name"] + "<br/>");
+        document.write(hotel.name + "<br/>");
+        document.write("Rooms: " + hotel.rooms + "<br/>")
+        document.write("Available: " + hotel.checkAvailable() + "<br/>")
+
+        //Constructor Notation -- Above is Object Notation
+        function Hotel(name, rooms, booked) {
+            this.name = name;
+            this.rooms = rooms;
+            this.booked = booked;
+            this.checkAvailable = function() {
+                return this.rooms - this.booked;
+            };
+        }
+
+        var hotel2 = new Hotel("Mircotel", 25, 5);
+        dotument.write("Name: " + hotel2.name + "<br/>");
+        dotument.write("Rooms Available: " + hotel2.checkAvailable + "<br/>");
+
+        //Class Notation
+        class Hotel2 {
+            constructor(name, rooms, booked) {
+                this.name = name;
+                this.rooms = rooms;
+                this.booked = booked;
+            }
+
+            checkAvailable() {
+                return this.room - this.booked;
+            }
+        }
+
+        // A class is just a collection of variables and/or functions
+        var hotel3 = new Hotel2("Supr 8", 30, 2);
+        hotel3.name = "Super 8";
+        dotument.write("Name: " + hotel3.name + "<br/>");
+        dotument.write("Rooms Available: " + hotel3.checkAvailable + "<br/>");
+    </script>
+</body>
+</html>

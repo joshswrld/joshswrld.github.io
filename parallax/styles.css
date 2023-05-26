@@ -1,4 +1,4 @@
-.wapper {
+.wrapper {
     height: 100vh;          /* 100% of the viewport height */
     overflow-x: hidden;     /* prevent horizontal scroll*/
     overflow-y: auto;       /* allow vertical scroll */
@@ -7,6 +7,7 @@
 }
 
 .section {
+    text-align: center;
     position: relative;
     height: 100vh;
     display: flex;
@@ -15,7 +16,7 @@
     justify-content: center;
 }
 
-.static { background: red; }
+.static { background: tan; }
 .bg1::after { background: url("https://picsum.photos/900/700");}
 .bg2::after { background: url("https://picsum.photos/800/600");}
 
